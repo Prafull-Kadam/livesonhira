@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dr.jitesh kadam">
+<meta name="keywords" content="">
+<title>Sonhira Youth congress</title>
+<!-- Site favicon -->
+<link rel='shortcut icon' type='image/x-icon' href='/static/images/logo.ico' />
+<!-- /site favicon -->
+
+{% load static %}
+<link href="{% static 'css/bootstrap.min.css' %}"    rel="stylesheet" />
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+<link href="{% static 'css/entypo.css' %}"           rel="stylesheet" />
+<link href="{% static 'css/mouldifi-core.css' %}"    rel="stylesheet" />
+<link href="{% static 'css/mouldifi-forms.css' %}"   rel="stylesheet" />
+
+<style>
+
+	td {padding: 5px;}
+</style>
+</head>
+<body>
+
+<!-- Page container -->
+<div class="page-container">
+
+	<!-- Page Sidebar -->
+	<div class="page-sidebar">
+
+		<!-- Site header  -->
+		<header class="site-header">
+
+      <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
+		  <div class="site-logo"><a href="index.html"><img src="/static/images/j27.jpg" alt="DR. Jitesh Kadam Yuvashakti" title="DR. Jitesh Kadam Yuvashakti"></a></div>
+		  <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
+    	</header>
+		<!-- /site header -->
+
+		<!-- Main navigation -->
+		<ul id="side-nav" class="main-menu navbar-collapse collapse">
+			<li class="has-sub active "><a href=""><i class="fa fa-search" aria-hidden="true"></i><span class="title">Search</span></a>
+				<ul class="nav">
+					<li class="active"><a href="https://www.facebook.com/jitesh.kadam"><span class="title">Facebook</span></a></li>
+					<li class="active"><a href="/videos/"><span class="title">Videos</span></a></li>
+				</ul>
+			</li>
+
+		</ul>
+		<!-- /main navigation -->
+  </div>
+  <!-- /page sidebar -->
+
+  <!-- Main container -->
+  <div class="main-container gray-bg">
+
+		<!-- Main header -->
+		<div class="main-header row">
+		  <div class="col-sm-6 col-xs-7">
+
+			<!-- User info -->
+			<ul class="user-info pull-left">
+
+			  <li class="profile-info dropdown">
+			  <h2><strong></i><img width="100" class="img-circle avatar" alt="" src="/static/images/j3.jpg">डॉ .जितेश (भैय्या) कदम युवा शक्ति</strong></h2>
+			</li>
+			</ul>
+
+			<!-- /user info -->
+
+		  </div>
+
+		  <div class="col-sm-6 col-xs-5">
+			<div class="pull-right">
+				<!-- LOGOUT BUTTON -->
+				<!-- /LOGOUT BUTTON -->
+			</div>
+		  </div>
+		</div>
+		<!-- /main header -->
+
+		<!-- Main content -->
+		<!--Content block-->
+
+        <div>
+            <form action="/upload/" enctype = "multipart/form-data" method="POST">
+				{% csrf_token %}
+				{{form}}
+				<span style="color:red">{{message}}</span>
+				<table cellspacing="">
+				
+				{% if data %} 
+				<tr><td><label for="fname">First Name:  </label></td><td><input id="fname" type="text" width='200' name="fname" placeholder="नाव" value={{data.fname}} required></td></tr>
+				<tr><td><label for="fname">Last Name:   </label></td><td><input id="lname" type="text" name="lname" placeholder="आडनाव" value={{data.lname}} required></td></tr>
+				<tr><td><label for="fname">Vilage/City: </label></td><td><input id="city" type="text" name="city" value={{data.city}} placeholder="गाव" required></td></tr>
+				<tr><td><label for="fname">Taluka:      </label></td><td><input id="taluka" type="text" name="taluka" value={{data.taluka}} placeholder="तालुका" required></td><tr>
+				<tr><td><label for="fname">District:    </label></td><td><input id="district" type="text" name="district" value={{data.district}} placeholder="जिल्हा" required></td></tr>
+				<tr><td><label for="fname">Mobile Number:    </label></td><td><input id="mob_no" type="text" name="mobile_no" value={{data.mobile_no}} required></td></tr>
+				<tr><td><label for="fname">Email:</label></td><td><input id="email" type="text" name="email" value={{data.email}}></td></tr>
+				<tr><td><label for="fname">Birthday Wishes:</label></td><td><textarea rows="4" cols="23" name="message" >  </textarea></td></tr>
+				<tr><td><label for="fname">Upload picture: </label></td><td><input type = "file" placeholder = "Picture" name = "picture" /></td></tr>	
+			    {% else %}
+                <tr><td><label for="fname">First Name:  </label></td><td><input id="fname" type="text" width='200' name="fname" placeholder="नाव" value="" required></td></tr>
+				<tr><td><label for="fname">Last Name:   </label></td><td><input id="lname" type="text" name="lname" placeholder="आडनाव" value="{{data.lname}}" required></td></tr>
+				<tr><td><label for="fname">Vilage/City: </label></td><td><input id="city" type="text" name="city" value="{{data.fname}}" placeholder="गाव" required></td></tr>
+				<tr><td><label for="fname">Taluka:      </label></td><td><input id="taluka" type="text" name="taluka" value="" placeholder="तालुका" required></td><tr>
+				<tr><td><label for="fname">District:    </label></td><td><input id="district" type="text" name="district" value="" placeholder="जिल्हा" required></td></tr>
+				<tr><td><label for="fname">Mobile Number:    </label></td><td><input id="mob_no" type="text" name="mobile_no" value="" required></td></tr>
+				<tr><td><label for="fname">Email:</label></td><td><input id="email" type="text" name="email" value=""></td></tr>
+                <tr><td><label for="fname">Birthday Wishes:</label></td><td><textarea rows="4" cols="23" name="message" >  </textarea></td></tr>
+				<tr><td><label for="fname">Upload picture: </label></td><td><input type = "file" placeholder = "Picture" name = "picture" /></td></tr>
+                {% endif %}
+				</table>
+				<hr>
+				<table>
+				<tr><td></td><td><input type="submit" cols="4" style = "margin-left:50%;" value="Submit"></td></tr>
+
+				</table>
+            </form>
+
+			<footer class="footer-main">
+				&copy; 2017 <strong>Prafull Kadam</br>prafullkadam01@gmail.com</strong></br><a target="_blank" href="#/">8087079007</a>
+			</footer>
+        </div>
+	  <!-- /main content -->
+  </div>
+  <!-- /main container -->
+
+</div>
+<!-- /page container -->
+
+<!--Load JQuery-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/plugins/metismenu/jquery.metisMenu.js' %}"></script>
+<script src="{% static 'js/plugins/blockui-master/jquery-ui.js' %}"></script>
+<script src="{% static 'js/plugins/blockui-master/jquery.blockUI.js' %}"></script>
+<!--Float Charts-->
+<script src="{% static 'js/plugins/flot/jquery.flot.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.tooltip.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.resize.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.selection.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.pie.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.time.min.js'%}"></script>
+<script src="{% static 'js/functions.js'%}"></script>
+
+<!--ChartJs-->
+<script src="{% static 'js/plugins/chartjs/Chart.min.js'%}"></script>
+</body>
+</html>

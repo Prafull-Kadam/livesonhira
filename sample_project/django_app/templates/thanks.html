@@ -1,0 +1,190 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dr.jitesh kadam">
+<meta name="keywords" content="sonhira">
+<title>Sonhira Youth congress</title>
+<!-- Site favicon -->
+<link rel='shortcut icon' type='image/x-icon' href='/static/images/logo.ioc' />
+<!-- /site favicon -->
+
+{% load static %}
+<link href="{% static 'css/bootstrap.min.css' %}"    rel="stylesheet" />
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+<link href="{% static 'css/entypo.css' %}"           rel="stylesheet" />
+<link href="{% static 'css/mouldifi-core.css' %}"    rel="stylesheet" />
+<link href="{% static 'css/mouldifi-forms.css' %}"   rel="stylesheet" />
+
+
+</head>
+<body>
+{% csrf_token %}
+<!-- Page container -->
+<div class="page-container">
+
+	<!-- Page Sidebar -->
+	<div class="page-sidebar">
+
+		<!-- Site header  -->
+		<header class="site-header">
+
+      <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
+		  <div class="site-logo"><a href="index.html"><img src="/static/images/j9.jpg" alt="DR. Jitesh Kadam Yuvashakti" title="DR. Jitesh Kadam Yuvashakti"></a></div>
+		  <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
+    	</header>
+		<!-- /site header -->
+
+		<!-- Main navigation -->
+		<ul id="side-nav" class="main-menu navbar-collapse collapse">
+			<li class="has-sub active "><a href=""><i class="fa fa-search" aria-hidden="true"></i><span class="title">Search </span></a>
+				<ul class="nav">
+                    <li class="active"><a href="/birthdaywish/"><span class="title">Birthdaywish</span></a></li>
+                    <li class="active"><a href="https://www.facebook.com/jitesh.kadam"><span class="title">Facebook</span></a></li>
+                    <li class="active"><a href="/videos/"><span class="title">Videos</span></a></li>
+				</ul>
+			</li>
+		</ul>
+		<!-- /main navigation -->
+  </div>
+  <!-- /page sidebar -->
+
+  <!-- Main container -->
+  <div class="main-container gray-bg">
+
+		<!-- Main header -->
+		<div class="main-header row">
+		  <div class="col-sm-6 col-xs-7">
+
+			<!-- User info -->
+			<!-- /user info -->
+
+		  </div>
+
+		  <div class="col-sm-6 col-xs-5">
+			<div class="pull-right">
+				<!-- LOGOUT BUTTON -->
+				<!-- /LOGOUT BUTTON -->
+			</div>
+		  </div>
+		</div>
+		<!-- /main header -->
+
+		<!-- Main content -->
+		<!--Content block-->
+        <div>   <hr><hr>
+                {% ifequal number 1 %}
+                    {% ifequal lang 'eng' %}
+                    <b>{{name}},</b><i><br>Thank you very much for the wonderful blessings <br>
+                    I’ve received this year – <br>
+                    that’s to have special circle of friends <br>
+                    who wish the best for me.<br>
+                    And you’re one of that.<br>
+                    Thank you......</i>
+                    {% endifequal %}
+                    {% ifequal lang 'mr' %}
+                    <b>{{name}},</b><i><br> आपण दिलेल्या शुभेच्छांचा,<br>
+                    अगदी मनापासून स्वीकार…<br>
+                    आपले मनःपूर्वक आभार…!<br></i>
+                    {% endifequal %}
+
+				{% endifequal %}
+
+				{% ifequal number 2 %}
+				{% ifequal lang 'eng' %}
+				<b>{{name}},</b><i><br>thanks for birthday messages.<br>
+				God has truly blessed me with a wonderful family and amazing friends.<br>
+				I'm so grateful for all your wonderful birthday wishes,<br>
+				it was great hearing from everyone, you truly made my day special.<br>
+				Thanks......</i>
+				{% endifequal %}
+				{% ifequal lang 'mr' %}
+			    <b>{{name}},</b><br><i>काही क्षण असे असतात,<br>
+				कि जे विसरायचे नसतात!<br>
+				काही गोष्टी अश्या असतात,<br>
+				कि ज्या बोलायच्या नसतात!<br>
+				काही व्यक्ती अश्या असतात,<br>
+				कि ज्या विसरायच्या नसतात!!!<br>
+				आपण दिलेल्या शुभेच्छांचा,<br>
+				अगदी मनापासून स्वीकार…<br>
+				आपले मनःपूर्वक आभार…!!!<br></i>
+				{% endifequal %}
+
+			{% endifequal %}
+
+			{% ifequal number 3 %}
+			{% ifequal lang 'eng' %}
+			<b>{{name}},</b><i><br>thanks for birthday messages ...<br>
+			Everything will get an end or lost one day.<br>
+			But your birthday wishes will always stay in my heart.<b>
+			Thank you for your lovely and wonderful wishes.</i>
+			{% endifequal %}
+			{% ifequal lang 'mr' %}
+			<b>{{name}},</b><i><br>काही क्षण असे असतात,<br>
+			कि जे विसरायचे नसतात!<br>
+			काही गोष्टी अश्या असतात,<br>
+			कि ज्या बोलायच्या नसतात!<br>
+			काही व्यक्ती अश्या असतात,<br>
+			कि ज्या विसरायच्या नसतात!!!<br>
+			आपण दिलेल्या शुभेच्छांचा,<br>
+			अगदी मनापासून स्वीकार…<br>
+			आपले मनःपूर्वक आभार…!!!<br></i>
+			{% endifequal %}
+
+		{% endifequal %}
+		
+		{% ifequal number 4 %}
+		{% ifequal lang 'eng' %}
+		<b>{{name}},</b><i><br> 
+		It is hard for me to pick the happiest birthday of my life,</br>
+		because almost every year, you celebrated it with me, </br>
+		Thank you so much!!!</br></i>
+        {% endifequal %}
+		{% ifequal lang 'mr' %}
+		<b>{{name}},</b><i><br>काही क्षण असे असतात,<br>
+		कि जे विसरायचे नसतात!<br>
+		काही गोष्टी अश्या असतात,<br>
+		कि ज्या बोलायच्या नसतात!<br>
+		काही व्यक्ती अश्या असतात,<br>
+		कि ज्या विसरायच्या नसतात!!!<br>
+		आपण दिलेल्या शुभेच्छांचा,<br>
+		अगदी मनापासून स्वीकार…<br>
+		आपले मनःपूर्वक आभार…!!!<br></i>
+		{% endifequal %}
+
+	   {% endifequal %}
+                <hr><h2><strong></i><img width="60000" class="img-circle avatar" alt="" src="/static/images/j9.jpg"> डॉ .जितेश (भैय्या) कदम....</strong></h2>
+        </div>
+	  <!-- /main content -->
+    <!-- Footer -->
+    <footer class="footer-main">
+		&copy; 2017 <strong>Prafull Kadam</br>prafullkadam01@gmail.com</strong></br><a target="_blank" href="#/">8087079007</a>
+	</footer>
+	<!-- /footer -->
+
+  </div>
+  <!-- /main container -->
+
+</div>
+<!-- /page container -->
+<!--Load JQuery-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/plugins/metismenu/jquery.metisMenu.js' %}"></script>
+<script src="{% static 'js/plugins/blockui-master/jquery-ui.js' %}"></script>
+<script src="{% static 'js/plugins/blockui-master/jquery.blockUI.js' %}"></script>
+<!--Float Charts-->
+<script src="{% static 'js/plugins/flot/jquery.flot.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.tooltip.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.resize.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.selection.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.pie.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.time.min.js'%}"></script>
+<script src="{% static 'js/functions.js'%}"></script>
+
+<!--ChartJs-->
+<script src="{% static 'js/plugins/chartjs/Chart.min.js'%}"></script>
+</body>
+</html>

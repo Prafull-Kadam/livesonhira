@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mouldifi - A fully responsive, HTML5 based admin theme">
+<meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, Mouldifi, web design, CSS3">
+<title>Sonhira Youth congress</title>
+<!-- Site favicon -->
+<!--<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />-->
+<!-- /site favicon -->
+
+{% load static %}
+<link href="{% static 'css/bootstrap.min.css' %}"    rel="stylesheet" />
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+<link href="{% static 'css/entypo.css' %}"           rel="stylesheet" />
+<link href="{% static 'css/mouldifi-core.css' %}"    rel="stylesheet" />
+<link href="{% static 'css/mouldifi-forms.css' %}"   rel="stylesheet" />
+
+
+</head>
+<body>
+
+<!-- Page container -->
+<div class="page-container">
+
+	<!-- Page Sidebar -->
+	<div class="page-sidebar">
+
+		<!-- Site header  -->
+		<header class="site-header">
+
+            <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
+
+		  <div class="site-logo"><a href="index.html"><img src="/static/images/logo-side-panel.png" alt="DR. Jitesh Kadam Yuvashakti" title="DR. Jitesh Kadam Yuvashakti"></a></div>
+
+		  <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
+		</header>
+		<!-- /site header -->
+
+		<!-- Main navigation -->
+		<ul id="side-nav" class="main-menu navbar-collapse collapse">
+			<li class="has-sub active "><a href="index.html"><i class="fa fa-search" aria-hidden="true"></i><span class="title">Search Engine</span></a>
+				<ul class="nav">
+					<li class="active"><a href="index.html"><span class="title">Misc.</span></a></li>
+					<li><a href="ecommerce-dashboard.html"><span class="title">E-Commerce</span></a></li>
+					<li><a href="news-dashboard.html"><span class="title">News Portal</span></a></li>
+				</ul>
+			</li>
+
+
+			<!-- <li class="has-sub"><a href="short-view.html"><i class="icon-popup"></i><span class="title">Grid Views</span></a>
+				<ul class="nav collapse">
+					<li><a href="short-view.html"><span class="title">Short View</span></a></li>
+					<li><a href="detailed-view.html"><span class="title">Detailed View</span></a></li>
+					<li><a href="detailed-view-2.html"><span class="title">Detailed Action View</span></a></li>
+				</ul>
+			</li> -->
+			<!-- <li class="has-sub">
+				<a href="#/"><i class="icon-flow-tree"></i><span class="title">Menu Levels</span></a>
+				<ul class="nav collapse">
+					<li><a href="#/"><span class="title">Menu Level 1.1</span></a></li>
+					<li><a href="#/"><span class="title">Menu Level 1.2</span></a></li>
+					<li class="has-sub">
+						<a href="#/"><span class="title">Menu Level 1.3</span></a>
+						<ul class="nav collapse">
+							<li><a href="#/"><span class="title">Menu Level 2.1</span></a></li>
+							<li class="has-sub">
+								<a href="#/"><span class="title">Menu Level 2.2</span></a>
+								<ul class="nav collapse">
+									<li class="has-sub">
+										<a href="#/"><span class="title">Menu Level 3.1</span></a>
+										<ul class="nav collapse">
+											<li><a href="#/"><span class="title">Menu Level 4.1</span></a></li>
+										</ul>
+									</li>
+									<li><a href="#/"><span class="title">Menu Level 3.2</span></a></li>
+								</ul>
+							</li>
+							<li><a href="#/"><span class="title">Menu Level 2.3</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li> -->
+
+		</ul>
+		<!-- /main navigation -->
+  </div>
+  <!-- /page sidebar -->
+
+  <!-- Main container -->
+  <div class="main-container gray-bg">
+
+		<!-- Main header -->
+		<div class="main-header row">
+		  <div class="col-sm-6 col-xs-7">
+
+			<!-- User info -->
+			<ul class="user-info pull-left">
+			  <li class="profile-info dropdown">
+                  <img width="44" class="img-circle avatar" alt="" src="{{ user.socialaccount_set.all.0.get_avatar_url }}">{{ user.socialaccount_set.all.0.extra_data.name }}
+			  </li>
+			</ul>
+			<!-- /user info -->
+
+		  </div>
+
+		  <div class="col-sm-6 col-xs-5">
+			<div class="pull-right">
+				<!-- LOGOUT BUTTON -->
+				<a href="/accounts/logout"><button class="btn btn-danger btn-outline" type="button">LOGOUT</button></a>
+
+				<!-- /LOGOUT BUTTON -->
+			</div>
+		  </div>
+		</div>
+		<!-- /main header -->
+
+		<!-- Main content -->
+		<!--Content block-->
+		<hr>
+		गणपती बाप्पा मोरया !!!!!
+		<hr>
+		<hr>
+		सुखकर्ता दुखहर्ता वार्ता विघ्नाची |<br>
+		नुरवी पूर्वी प्रेम कृपा जयाची |<br>
+		सर्वांगी सुंदर उटी शेंदुराची |<br>
+		कंठी झरके माल मुक्ताफळाची || १ ||<br>
+		
+		जय देव जय देव जय मंगलमूर्ती |<br>
+		दर्शनमात्रे मनकामना पुरती || <br>
+		रत्नखचित फरा तूज गौरीकुमरा |<br>
+		चंदनाची उटी कुंकुमकेशरा |<br>
+		हिरे जडित मुकुट शोभतो बरा |<br>
+		रुणझुणती नुपुरे चरणी घागरिया || 2 ||<br>
+		
+		लंबोदर पितांबर फनी वरवंदना |<br>
+		सरळ सोंड वक्रतुंड त्रिनयना |<br>
+		दास रामाचा वाट पाहे सदना |<br>
+		संकटी पावावे निर्वाणी रक्षावे सुरवंदना |<br>
+		जय देव जय देव जय मंगलमूर्ती |<br>
+		दर्शनमात्रे मनकामना पुरती || ३ ||<br>
+				
+	  <!-- /main content -->
+
+  </div>
+  <!-- /main container -->
+
+</div>
+<!-- /page container -->
+
+<!--Load JQuery-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/plugins/metismenu/jquery.metisMenu.js' %}"></script>
+<script src="{% static 'js/plugins/blockui-master/jquery-ui.js' %}"></script>
+<script src="{% static 'js/plugins/blockui-master/jquery.blockUI.js' %}"></script>
+<!--Float Charts-->
+<script src="{% static 'js/plugins/flot/jquery.flot.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.tooltip.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.resize.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.selection.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.pie.min.js'%}"></script>
+<script src="{% static 'js/plugins/flot/jquery.flot.time.min.js'%}"></script>
+<script src="{% static 'js/functions.js'%}"></script>
+
+<!--ChartJs-->
+<script src="{% static 'js/plugins/chartjs/Chart.min.js'%}"></script>
+</body>
+</html>

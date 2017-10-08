@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mouldifi - A fully responsive, HTML5 based admin theme">
+<meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, Mouldifi, web design, CSS3">
+<title>Sonhira Youth congress</title>
+<!-- Site favicon -->
+<link rel='shortcut icon' type='image/x-icon' href='/static/images/logo.ico' />
+<!-- /site favicon -->
+
+<!-- Entypo font stylesheet -->
+<link href="/static/css/entypo.css" rel="stylesheet">
+<!-- /entypo font stylesheet -->
+
+<!-- Font awesome stylesheet -->
+<link href="/static/css/font-awesome.min.css" rel="stylesheet">
+<!-- /font awesome stylesheet -->
+
+<!-- Bootstrap stylesheet min version -->
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<!-- /bootstrap stylesheet min version -->
+
+<!-- Mouldifi core stylesheet -->
+<link href="/static/css/mouldifi-core.css" rel="stylesheet">
+<!-- /mouldifi core stylesheet -->
+
+<link href="/static/css/plugins/select2/select2.css" rel="stylesheet">
+
+<link href="/static/css/mouldifi-forms.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+<![endif]-->
+<style>
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Page container -->
+<div class="page-container">
+
+  <!-- Page Sidebar -->
+  <div class="page-sidebar">
+
+    <!-- Site header  -->
+		<header class="site-header">
+
+          <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
+		  <div class="site-logo"><a href="index.html"><img height='700' src="/static/images/j1.jpeg" alt="DR. Jitesh Kadam Yuvashakti" title="DR. Jitesh Kadam Yuvashakti"></a></div>
+
+		  <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
+    	</header>
+		<!-- /site header -->
+
+		<!-- Main navigation -->
+    <ul id="side-nav" class="main-menu navbar-collapse collapse">
+      <li class="has-sub active "><a href=""><i class="fa fa-search" aria-hidden="true"></i><span class="title">Search</span></a>
+        <ul class="nav">
+          <li class="active"><a href="https://www.facebook.com/jitesh.kadam"><span class="title">Facebook</span></a></li>
+          <li class="active"><a href="/videos/"><span class="title">Videos</span></a></li>
+        </ul>
+      </li>
+
+    </ul>
+				<!-- /main navigation -->
+  </div>
+  <!-- /page sidebar -->
+
+  <!-- Main container -->
+  <div class="main-container">
+
+	<!-- Main header -->
+    <div class="main-header row">
+      <!-- Main header -->
+      <div class="main-header row">
+        <div class="col-sm-6 col-xs-7">
+
+        <!-- User info -->
+        <ul class="user-info pull-left">
+          <li class="profile-info dropdown">
+                    <img width="44" class="img-circle avatar" alt="" src="{{ user.socialaccount_set.all.0.get_avatar_url }}">{{ user.socialaccount_set.all.0.extra_data.name }}
+          </li>
+        </ul>
+        <!-- /user info -->
+
+        </div>
+
+        <div class="col-sm-6 col-xs-5">
+        <div class="pull-right">
+          <!-- LOGOUT BUTTON -->
+          <a href="/accounts/logout"><button class="btn btn-danger btn-outline" type="button">LOGOUT</button></a>
+
+          <!-- /LOGOUT BUTTON -->
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-5">
+	  	<div class="pull-right">
+ 		</div>
+      </div>
+    </div>
+	<!-- /main header -->
+
+	<!-- Secondary header -->
+	<!-- /secondary header -->
+
+	<!-- Filter wrapper -->
+	<div class="row filter-wrapper visible-box" id="filter-box">
+		<div class="col-lg-12">
+
+	<!-- Main content -->
+    <div class="main-content">
+
+		<div class="row">
+			<div class="col-md-12">
+        {% for obj in details %}
+				<!-- Card list view -->
+				<div class="cards-container box-view">
+					<!-- Card -->
+					<div class="card">
+						<!-- Card Header -->
+						<div class="card-header">
+							<!-- Card Photo -->
+							<div class="card-photo">
+                            {% if obj.picture %}
+                            <span class="badge-primary" width="300" height="200" > <img id={{obj.id}} src={{obj.picture}} width="300" height="200"></span>
+							{% endif %}	
+							</div>
+							<!-- /card photo -->
+							<!-- Card Short Description -->
+							<div class="card-short-description">
+								<h5><span class="user-name"><a href="#/">{{obj.first_name}} {{obj.last_name}}</a></span></h5>
+                                <p><a href="mailto:#">{{obj.mobile_no}}</a></br><a href="mailto:#">{{obj.email}}</a></p>
+							</div>
+							<!-- /card short description -->
+						</div>
+						<!-- /card header -->
+
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+
+          <script>
+          // Get the modal
+          var modal = document.getElementById('myModal');
+
+          // Get the image and insert it inside the modal - use its "alt" text as a caption
+          var img = document.getElementById({{obj.id}});
+          var modalImg = document.getElementById("img01");
+          var captionText = document.getElementById("caption");
+          img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+          }
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+          </script>
+						<!-- Card Content -->
+						<div class="card-content">
+							<p>{{obj.message}}</p>
+						</div>
+						<!-- /card content -->
+					</div>
+					<!-- /card -->
+				</div>
+				<!-- /card list view -->
+      {% endfor %}
+			</div>
+		</div>
+
+
+		<!-- Footer -->
+		<footer class="footer-main">
+			&copy; 2017 <strong>Prafull Kadam</br>prafullkadam01@gmail.com</strong></br><a target="_blank" href="#/">8087079007</a>
+		</footer>
+		<!-- /footer -->
+
+	  </div>
+	  <!-- /main content -->
+
+  </div>
+  <!-- /main container -->
+
+</div>
+<!-- /page container -->
+
+<!--Load JQuery-->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/plugins/metismenu/jquery.metisMenu.js"></script>
+<!-- Select2-->
+<script src="/static/js/plugins/select2/select2.full.min.js"></script>
+<script src="/static/js/functions.js"></script>
+<script>
+	$(document).ready(function () {
+		$(".select2").select2();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+{% extends "_base.html" %}
+{% load bootstrap3 %}
+
+{% block head_css %}
+    {% include 'snippets/landingpage_css.html' %}
+{% endblock %}
+
+{% block content %}
+{% bootstrap_messages %}
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="intro-message">
+                    <h1>CorpData</h1>
+                    <hr class="intro-divider" />
+                    <h3>MCA downloads made easy!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a name="services"></a>
+<div class="content-section-b terms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-heading">Why waste time downloading? Leave it to us!</h2>
+                <p class="lead">
+                    If you often need to spend around 3-4 hours on downloading public documents from MCA,
+                    just use our service which provides a simple 4-step process:
+                </p>
+                <ol>
+                    <li>Sign in to your account and select &ldquo;Place Order&rdquo;.</li>
+                    <li>Enter CIN along with MCA credentials and proceed to checkout</li>
+                    <li>Make payment via Payment Gateway (we accept Debit/Credit Cards and PayTM)</li>
+                    <li>We download the documents on your behalf and email you on completion</li>
+                </ol>
+                <p class="lead">Key benefits of this automated download of MCA documents:</p>
+                <ul>
+                    <li>Spend only 2 minutes to place order in CorpData instead of 3-4 hours downloading on MCA</li>
+                    <li>Get complete document set, organized by categories with proper filenames in the ZIP</li>
+                    <li>Fast transfer of company-wise ZIP from CorpData, instead of individual files from slower MCA server</li>
+                    <li>Real-time progress monitoring and notification of completion</li>
+                </ul>
+                <p>&nbsp;</p>
+                <iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/dNxZrfHY5Is" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<a name="pricing"></a>
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <h2 class="section-heading">Pricing</h2>
+                <p class="lead">
+                    For a limited period during the initial launch, you can download documents for
+                    a a flat fee of <code>₹120</code> per company, which includes payment of
+                    <code>₹100</code> to MCA. Please note that you will receive an invoice
+                    for the <code>₹20</code> convenience fee from CorpData, the invoice from MCA
+                    will be mailed separately (if applicable).
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a name="faq"></a>
+<div class="content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-push-6 col-sm-12">
+                <h2 class="section-heading">FAQ</h2>
+                <dl>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        What does the ZIP file contain?
+                    </dt>
+                    <dd>
+                        The ZIP file contains the PDFs for each company, organized in folders as per
+                        the categories filed on the MCA website. To ensure that each file name is
+                        unique, it is prefixed with the document ID.
+                    </dd>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        How much time it takes to download one company?
+                    </dt>
+                    <dd>
+                        It depends on the number of documents filed at MCA and response time of MCA
+                        server. It should not take more than 45 minutes to download a company.
+                    </dd>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        How long do I have to download the ZIP file?
+                    </dt>
+                    <dd>
+                        We will guarantee that the file will be made available for 24 hours after the
+                        download completes and the notification is sent to you via email. After
+                        24 hours, we may possibly delete it to ensure optimum space utilization on
+                        our server.
+                    </dd>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        Can only registered MCA users could avail your service?
+                    </dt>
+                    <dd>
+                        Yes, you need to provide your login credentials for MCA before downloading.
+                        If you don't have an account at MCA, <a target="_blank" href="http://www.mca.gov.in/mcafoportal/loadUserRegistration.do?link=loadUserRegistration">create it</a>
+                        and then use our service.
+                    </dd>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        Do you store my MCA username and password?
+                    </dt>
+                    <dd>
+                        No, we don't. While processing an order, it may be temporarily stored on
+                        our server as part of the downloading process but is removed after completion.
+                        See our <a target="_blank" href="{% url 'legal_privacy' %}">Privacy Policy</a>
+                        for more details.
+                    </dd>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        I got the notification, but I cannot download the ZIP File!
+                    </dt>
+                    <dd>
+                        See the above entry, we keep the file only for 24 hours. Please
+                        <a href="#contact">contact us</a> and we will try to make it available again
+                        for download within 24 hours.
+                    </dd>
+                    <dt><i class="glyphicon glyphicon-question-sign"></i>
+                        What happens if the MCA website is down?
+                    </dt>
+                    <dd>
+                        CorpData only facilitates access to public records available on the MCA
+                        website, we are not a reseller of public records and only ensure fast
+                        and convenient access to data. In case of connectivity issues, we will
+                        do our best to download the documents and raise a complaint with MCA
+                        to make the company available in your login.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a name="contact"></a>
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Contact Us</h2>
+                <p><i class="glyphicon glyphicon-envelope"></i>
+                    <a href="mailto:corpdata@corpdata.in">corpdata@corpdata.in</a>
+                </p>
+                <p><i class="glyphicon glyphicon-phone"></i>
+                    +91 97691 72006
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
